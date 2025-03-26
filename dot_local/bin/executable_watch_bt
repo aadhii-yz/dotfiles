@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Function to check the number in the file
+check_bt() {
+
+	# Battery percentage
+	percentage=$(echo "$(upower -i "$(upower -e | grep BAT)" | grep percentage | awk '{print $2}' | tr -d '%')")
+
+	# Send notification if the number is less than 15
+	if [[ "$percentage" -lt 15 ]]; then
+		notify-send "Alert" "The battery below 15 : $percentage%"
+	fi
+}
+
+# check_bt
+# Run the check in an infinite loop every 60 seconds in the background
+while true; do
+	check_bt
+	sleep 60
+done

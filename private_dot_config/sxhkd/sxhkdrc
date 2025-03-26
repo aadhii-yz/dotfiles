@@ -1,0 +1,22 @@
+# Opening chromium :
+super + alt + c
+    chromium
+
+# Kitty terminal :
+alt + Return
+    kitty
+
+# Neovim in Kitty :
+super + alt + n
+    kitty nvim
+
+# Change Theme :
+super + alt + l
+    newlook
+# Print full screen :
+Print
+    maim ~/Imgs/screenshots/screenshot_$(date +%F_%T).png
+
+# Print selected screen :
+shift + Print
+    maim --select ~/Imgs/screenshots/screenshot_$(date +%F_%T).png

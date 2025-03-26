@@ -1,0 +1,16 @@
+#!/bin/sh
+
+
+# Selecting wallpaper
+wall=$(find ~/wallpapers -type f -iname "*.jpg" -o -iname "*.png" | shuf -n 1)
+
+# Clearing colour cache
+wal -c
+
+# Setting wallpaper
+xwallpaper --zoom $wall
+
+# Generating color scheme
+wal -i $wall
+
+xdotool key super+F5

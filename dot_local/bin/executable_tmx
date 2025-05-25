@@ -1,0 +1,24 @@
+#!/bin/env bash
+
+SESSION=""
+
+if [[ -z "$1" ]]; then
+  printf "Enter session name : "
+  read -r SESSION
+else
+  SESSION="$1"
+fi
+
+SESSION_EXISTS=$(tmux list-sessions | grep $SESSION)
+
+if [ "$SESSION_EXISTS" == "" ]; then
+  tmux new-session -d -s $SESSION
+
+  tmux rename-window -t 0 "ZSH"
+  tmux send-keys -t "ZSH" "clear" C-m
+
+  tmux new-window -t $SESSION:1 -n "NVIM"
+  tmux send-keys -t "NVIM" "nvim ." C-m
+fi
+
+tmux attach-session -t $SESSION:0

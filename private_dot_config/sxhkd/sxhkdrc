@@ -13,6 +13,7 @@ super + alt + n
 # Change Theme :
 super + alt + l
     newlook
+
 # Print full screen :
 Print
     maim ~/Imgs/screenshots/screenshot_$(date +%F_%T).png
@@ -20,3 +21,16 @@ Print
 # Print selected screen :
 shift + Print
     maim --select ~/Imgs/screenshots/screenshot_$(date +%F_%T).png
+
+# Keyboard layouts :
+## qwerty :
+alt + F1
+    setxkbmap us
+
+## dvorak :
+alt + F2
+    setxkbmap us -variant dvorak
+
+## dvp :
+alt + F3
+    setxkbmap us -variant dvp

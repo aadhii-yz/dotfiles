@@ -110,7 +110,7 @@ export PATH=$PATH:$HOME/.local/bin
 # For GOLANG environment setup:
 export GOPATH=$HOME/Workspace/golib
 export GOBIN=$GOPATH/bin
-
+export PATH=$PATH:$GOBIN
 
 # TO: enable zsh-syntax-highlighting
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

@@ -1,0 +1,17 @@
+theme = "catppuccin_macchiato"
+
+[editor]
+line-number = "relative"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[keys.normal]
+# Access external TUIs
+# "A-g" = [":n", ":insert-output lazygit", ":buffer-close!", ":redraw", ":reload-all"]
+"A-f" = [":n", ":insert-output yazi", ":buffer-close!", ":redraw"]
+
+[keys.insert]
+"A-c" = "normal_mode"

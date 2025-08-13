@@ -104,6 +104,9 @@ source $ZSH/oh-my-zsh.sh
 
 ## Added by USER:pro 
 
+# ENV vars:
+export EDITOR=helix
+
 # My scripts:
 export PATH=$PATH:$HOME/.local/bin
 

@@ -132,5 +132,7 @@ alias i="xdotool key alt+shift+Up"
 alias j="xdotool key alt+shift+Down"
 alias cat="bat"
 alias hx="helix"
+# godoc server on :9060, shortcut exists in chromium home page
+alias godocs="godoc -http=:9060 > /dev/null &"
 
 ##

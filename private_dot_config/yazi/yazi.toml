@@ -1,0 +1,4 @@
+[opener]
+edit = [
+  { run = "~/.config/yazi/open_in_hx.sh \"$@\"", desc = "Open in helix (window 2)", orphan = false, for = "unix" }
+]

@@ -1,0 +1,4 @@
+[open]
+pdf = [
+  { run = 'zathura "$@"', orphan = true, desc = "Zathura (default)" }
+]

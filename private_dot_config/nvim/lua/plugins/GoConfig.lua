@@ -68,7 +68,7 @@ return {
 
 	-- Install Mason packages for Go
 	{
-		"williamboman/mason.nvim",
+		"mason-org/mason.nvim",
 		opts = {
 			ensure_installed = {
 				"gopls", -- LSP server for Go

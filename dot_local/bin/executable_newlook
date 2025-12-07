@@ -13,4 +13,6 @@ xwallpaper --zoom $wall
 # Generating color scheme
 wal -i $wall
 
-xdotool key super+F5
+# xdotool key --window root super+F5
+xte 'keydown Super_L' 'key F5' 'keyup Super_L'
+

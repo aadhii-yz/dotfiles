@@ -3,7 +3,7 @@
 set_status_bar() {
   # Get Data
   b="🔋: $(upower -i "$(upower -e | grep BAT)" | grep percentage | awk '{print $2}')"
-  d="📆: $(date +"%a %x")"
+  d="📆: $(date +"%a %d/%m/%y")"
   t="⏳: $(date +"%I:%M %p")"
 
   # Set Format

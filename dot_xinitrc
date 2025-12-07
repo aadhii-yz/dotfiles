@@ -8,15 +8,7 @@ sysmodmap=/etc/X11/xinit/.Xmodmap
 # merge in defaults and keymaps
 
 if [ -f $sysresources ]; then
-
-
-
-
-
-
-
     xrdb -merge $sysresources
-
 fi
 
 if [ -f $sysmodmap ]; then
@@ -24,15 +16,7 @@ if [ -f $sysmodmap ]; then
 fi
 
 if [ -f "$userresources" ]; then
-
-
-
-
-
-
-
     xrdb -merge "$userresources"
-
 fi
 
 if [ -f "$usermodmap" ]; then
@@ -50,10 +34,26 @@ fi
 
 
 # Setup DWM:
+# Set resolution with refresh-rate
+xrandr --output eDP-1 --mode 1920x1080 --rate 60
+
+# Set brightness to 50%
 xrandr --output eDP-1 --brightness 0.5 &
-$HOME/.local/bin/newlook &
+
+# Set wallpaper and the theme
+"$HOME/.local/bin/newlook" &
+
+# Start compositer
 xcompmgr &
+
+# Start notification manager
 dunst &
-$HOME/.local/bin/watch_bt &
-sxhkd -c $HOME/.config/sxhkd/sxhkdrc &
+
+# Set stauts bar and watch_bt
+"$HOME/.local/bin/status-bar.sh" &
+
+# Start hotkey manager
+sxhkd -c "$HOME/.config/sxhkd/sxhkdrc" &
+
+# Start DWM
 exec dwm

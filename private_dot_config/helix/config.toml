@@ -23,5 +23,10 @@ render = true
 # "A-g" = [":n", ":insert-output lazygit", ":buffer-close!", ":redraw", ":reload-all"]
 "A-f" = [":n", ":insert-output yazi", ":buffer-close!", ":redraw"]
 
+# Mapping alt+l & alt+h to jump forward & backward
+# Instead of ctrl+o & ctrl+i
+"A-l" = "jump_forward"
+"A-h" = "jump_backward"
+
 [keys.insert]
 "A-c" = "normal_mode"

@@ -29,3 +29,14 @@ language-servers = [ "svelteserver", "tailwindcss-ls" ]
 command = "prettier"
 args = ["--plugin", "prettier-plugin-svelte", "--plugin", "prettier-plugin-tailwindcss", "--stdin-filepath", "{file}"]
 #---
+
+# Set word wrap for .md and .txt files
+[[language]]
+name = "markdown"
+soft-wrap.enable = true
+
+[[language]]
+name = "plain-text"
+scope = "source.text"
+file-types = ["txt"]
+soft-wrap.enable = true

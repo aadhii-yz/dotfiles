@@ -12,7 +12,7 @@ super + alt + n
 
 # Change Theme :
 super + alt + l
-    newlook
+    source "$HOME/.local/bin/newlook"
 
 # Print full screen :
 Print

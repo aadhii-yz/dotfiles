@@ -15,6 +15,6 @@ set_status_bar() {
 
 while true; do
   set_status_bar
-  watch_bt
+  source "$HOME/.local/bin/watch_bt"
   sleep 60
 done

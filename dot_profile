@@ -1,0 +1,31 @@
+# ~/.profile
+
+# ENV vars:
+export EDITOR=helix
+
+# My scripts:
+export PATH=$PATH:$HOME/.local/bin
+
+# My environment specific scripts:
+export PATH=$PATH:$HOME/.local/bin-env
+
+# For GOLANG environment setup:
+export GOPATH=$HOME/Workspace/golib
+export GOBIN=$GOPATH/bin
+export PATH=$PATH:$GOBIN
+
+# For Rust environment setup:
+[[ -f "$HOME/.cargo/env" ]] && . "$HOME/.cargo/env"
+
+# For npm-global-binary setup:
+[[ -d "$HOME/.npm-global/bin" ]] && export PATH="$HOME/.npm-global/bin:$PATH"
+
+# For Bun environment setup:
+if [[ -d "$HOME/.bun" ]]; then
+  # Bun completions
+  [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
+
+  # Bun
+  export BUN_INSTALL="$HOME/.bun"
+  export PATH="$BUN_INSTALL/bin:$PATH"
+fi

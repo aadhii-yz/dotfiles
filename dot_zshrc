@@ -101,19 +101,9 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 
-
-## Added by USER:pro 
-
-# ENV vars:
-export EDITOR=helix
-
-# My scripts:
-export PATH=$PATH:$HOME/.local/bin
-
-# For GOLANG environment setup:
-export GOPATH=$HOME/Workspace/golib
-export GOBIN=$GOPATH/bin
-export PATH=$PATH:$GOBIN
+## Added by USER
+# Use environment variables
+[ -f "$HOME/.profile" ] && . "$HOME/.profile"
 
 # TO: enable zsh-syntax-highlighting
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -122,14 +112,8 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 setopt HIST_IGNORE_ALL_DUPS
 
 # Defining my aliases:
-alias h="echo '\nMy Commands:\n\th - help\n\tbt - battery percentage\n\tbrightness - set brightness from 0.0 to 1.0\n\tvol - set volume from 0% to 100%\n\ti - increase font size in st\n\tj - decrease font size in st\n\tnewtheme - change wallpaper and theme\n\toff - shutdown now\n'"
-# alias bt="source /home/pro/.local/bin/bt"
-# alias newtheme="source /home/pro/.local/bin/newlook"
-# alias off="shutdown now"
 alias brightness="xrandr --output eDP-1 --brightness"
 alias vol="pactl set-sink-volume @DEFAULT_SINK@"
-alias i="xdotool key alt+shift+Up"
-alias j="xdotool key alt+shift+Down"
 alias cat="bat"
 alias hx="helix"
 # godoc server on :9060, shortcut exists in chromium home page

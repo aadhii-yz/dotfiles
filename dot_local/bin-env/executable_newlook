@@ -8,11 +8,10 @@ wall=$(find ~/wallpapers -type f -iname "*.jpg" -o -iname "*.png" | shuf -n 1)
 wal -c
 
 # Setting wallpaper
-xwallpaper --zoom $wall
+xwallpaper --zoom "$wall"
 
 # Generating color scheme
-wal -i $wall
+wal -i "$wall"
 
 # xdotool key --window root super+F5
 xte 'keydown Super_L' 'key F5' 'keyup Super_L'
-

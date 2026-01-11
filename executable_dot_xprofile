@@ -34,14 +34,21 @@ fi
 
 
 # Setup DWM:
+
+# Export environment variables
+[ -f "$HOME/.profile" ] && . "$HOME/.profile"
+
 # Set resolution with refresh-rate
 xrandr --output eDP-1 --mode 1920x1080 --rate 60
 
 # Set brightness to 50%
 xrandr --output eDP-1 --brightness 0.5 &
 
+# Set keyboard layout to dvorak
+setxkbmap us -variant dvorak
+
 # Set wallpaper and the theme
-"$HOME/.local/bin/newlook" &
+"$HOME/.local/bin-env/newlook" &
 
 # Start compositer
 xcompmgr &
@@ -50,7 +57,7 @@ xcompmgr &
 dunst &
 
 # Set stauts bar and watch_bt
-"$HOME/.local/bin/status-bar.sh" &
+"$HOME/.local/bin-env/status-bar.sh" &
 
 # Start hotkey manager
 sxhkd -c "$HOME/.config/sxhkd/sxhkdrc" &

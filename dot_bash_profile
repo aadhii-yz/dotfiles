@@ -1,0 +1,9 @@
+#
+# ~/.bash_profile
+#
+
+# Use environment variables
+[ -f "$HOME/.profile" ] && . "$HOME/.profile"
+
+# Use existing configuration
+[[ -f "$HOME/.bashrc" ]] && . "$HOME/.bashrc"

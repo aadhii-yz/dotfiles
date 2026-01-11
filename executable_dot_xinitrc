@@ -1,6 +1,6 @@
-#!/bin/sh
+#!/bin/bash
 
-[ -f ~/.xprofile ] && . ~/.xprofile
+[ -f "$HOME/.xprofile" ] && . "$HOME/.xprofile"
 
 # Start DWM
 exec dwm

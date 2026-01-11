@@ -12,25 +12,41 @@ super + alt + n
 
 # Change Theme :
 super + alt + l
-    source "$HOME/.local/bin-env/newlook"
+    source "$HOME/.local/bin-env/newlook" && notify-send "Alert" "Theme changed..!!"
 
 # Print full screen :
 Print
-    maim ~/Imgs/screenshots/screenshot_$(date +%F_%T).png
+    maim ~/Imgs/screenshots/screenshot_$(date +%F_%T).png && notify-send "Alert" "Screen Shot Taken..!!"
 
 # Print selected screen :
 shift + Print
-    maim --select ~/Imgs/screenshots/screenshot_$(date +%F_%T).png
+    maim --select ~/Imgs/screenshots/screenshot_$(date +%F_%T).png && notify-send "Alert" "Selected Screen Shot Taken..!!"
+
+# Brightness controls
+XF86MonBrightnessUp
+    brightnessctl set +10% && notify-send "Alert" "Brightness Increased..!!"
+
+XF86MonBrightnessDown
+    brightnessctl set 10%- && notify-send "Alert" "Brightness Decreased..!!"
+# Volume controls
+XF86AudioRaiseVolume
+    pactl set-sink-volume @DEFAULT_SINK@ +5% && notify-send "Alert" "Volume Increased..!!"
+
+XF86AudioLowerVolume
+    pactl set-sink-volume @DEFAULT_SINK@ -5% && notify-send "Alert" "Volume Decreased..!!"
+
+XF86AudioMute
+    pactl set-sink-mute @DEFAULT_SINK@ toggle && notify-send "Alert" "Volume Muted..!!"
 
 # Keyboard layouts :
 ## qwerty :
 alt + F1
-    setxkbmap us
+    setxkbmap us && notify-send "Alert" "Keyboard Layout set to qwerty..!!"
 
 ## dvorak :
 alt + F2
-    setxkbmap us -variant dvorak
+    setxkbmap us -variant dvorak && notify-send "Alert" "Keyboard Layout set to dvorak..!!"
 
 ## dvp :
 alt + F3
-    setxkbmap us -variant dvp
+    setxkbmap us -variant dvp && notify-send "Alert" "Keyboard Layout set to dvp..!!"

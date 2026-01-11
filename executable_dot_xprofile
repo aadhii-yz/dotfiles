@@ -41,9 +41,6 @@ fi
 # Set resolution with refresh-rate
 xrandr --output eDP-1 --mode 1920x1080 --rate 60
 
-# Set brightness to 50%
-xrandr --output eDP-1 --brightness 0.5 &
-
 # Set keyboard layout to dvorak
 setxkbmap us -variant dvorak
 

@@ -1,0 +1,7 @@
+[".config/nvim"]
+    type = "git-repo"
+    url = "https://github.com/aadhii-yz/nvim-config.git"
+
+[".local/bin"]
+    type = "git-repo"
+    url = "https://github.com/aadhii-yz/scripts.git"

@@ -1,4 +1,0 @@
-#!/bin/bash
-
-# To print the battery percentage:
-echo "$(upower -i "$(upower -e | grep BAT)" | grep percentage)"

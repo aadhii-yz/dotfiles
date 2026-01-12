@@ -106,7 +106,10 @@ source $ZSH/oh-my-zsh.sh
 [ -f "$HOME/.profile" ] && . "$HOME/.profile"
 
 # TO: enable zsh-syntax-highlighting
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+[ -f "/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ] && source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# TO: enable fzf history picker on CTRL+R
+[ -f "/usr/share/fzf/key-bindings.zsh" ] && source /usr/share/fzf/key-bindings.zsh
 
 # TO: avoid duplicates in history
 setopt HIST_IGNORE_ALL_DUPS

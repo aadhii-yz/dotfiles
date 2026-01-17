@@ -1,3 +1,6 @@
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
 # Opening chromium :
 super + alt + c
     chromium
@@ -13,6 +16,10 @@ super + alt + n
 # Change Theme :
 super + alt + l
     source "$HOME/.local/bin-env/newlook" && notify-send "Alert" "Theme changed..!!"
+
+# Manage WiFi:
+super + alt + w
+    source "$HOME/.local/bin/wifi-manager"
 
 # Print full screen :
 Print
